@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout Produk</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    
+#cart-btn {
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+/* Logo proporsional */
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+/* Custom Navbar Theme */
+/* ...existing code... */
+.custom-navbar {
+  background-color: #2196F3; /* biru muda modern */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/* ...existing code... */
+
+.brand-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff !important;
+}
+
+.custom-navbar .nav-link {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #1f3dac; /* hover emas */
+}
+
+.custom-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+/* Tambahan untuk tombol pesan di navbar */
+.custom-navbar .btn-success {
+  background-color: #ffffff;
+  color: #2196f3;
+  border: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+    /* Jarak antar nav item */
+.custom-navbar .nav-item {
+  margin-right: 18px;
+}
+.pesan-btn {
+  border-radius: 8px !important;
+  padding: 10px 32px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+    .product-img { width: 100%; max-height: 550px; object-fit: cover; border-radius: 12px; }
+    h3.fw-bold { font-size: 2rem; font-weight: 700; }
+    .price { font-size: 1.6rem; font-weight: 700; color: #e63946; }
+    .checkout-btn { width: 100%; padding: 12px; border-radius: 8px; font-size: 1rem; font-weight: 600; margin-top: 10px; }
+    .whatsapp { background: #25D366; color: white; }
+    .shopee { background: #ee4d2d; color: white; }
+    .tiktok { background: #000; color: white; }
+    .tokopedia { background: #32cd32; color: white; }
+    .section-title { font-size: 1.4rem; font-weight: 700; margin-top: 25px; margin-bottom: 10px; }
+    p, li { font-weight: 400; font-size: 1rem; color: #333; }
+    .kemasan-table th { background: #2196f3; color: white; text-align: center; font-weight: 600; }
+  .back-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 10px;
+  background: #2196f3; /* abu-abu Bootstrap */
+  color: white;
+  text-align: center;
+  display: inline-block;
+  transition: background 0.3s;
+}
+.back-btn:hover {
+  background: #ffffff; /* lebih gelap saat hover */
+  color: #2196f3;
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+  <div class="container">
+    <a class="navbar-brand brand-text" href="index.html#hero">Ikigaigift</a>
+     <!-- Toggle button -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" 
+            data-bs-target="#navbarNav" aria-controls="navbarNav" 
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html#hero">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#about">About us</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#katalog">Catalog</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#testimoni">testimonial</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#contact">Contact Us</a></li>
+        <li class="nav-item">
+          <a href="https://wa.me/6281234567890" target="_blank" class="btn btn-success pesan-btn nav-link">Pesan</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<div class="container py-5 mt-5">
+  <div class="row">
+    <div class="col-md-6">
+      <img id="product-img" src="" alt="Produk" class="product-img shadow-sm">
+    </div>
+    <div class="col-md-6">
+      <h3 id="product-title" class="fw-bold"></h3>
+      <p id="product-desc" class="text-muted"></p>
+      <p id="product-price" class="price"></p>
+      <h5 class="mt-3">Pilihan Kemasan & Harga</h5>
+      <table class="table table-bordered kemasan-table w-100">
+        <thead>
+          <tr><th>Kemasan</th><th>Harga</th></tr>
+        </thead>
+        <tbody id="kemasan-body"></tbody>
+      </table>
+      <a id="wa-btn" class="btn checkout-btn whatsapp">Checkout via WhatsApp</a>
+      <a id="shopee-btn" class="btn checkout-btn shopee">Checkout via Shopee</a>
+      <a id="tiktok-btn" class="btn checkout-btn tiktok">Checkout via TikTok Shop</a>
+      <a id="tokopedia-btn" class="btn checkout-btn tokopedia">Checkout via Tokopedia</a>
+      <!-- Tombol Kembali -->
+<a href="index.html#katalog" class="back-btn">
+  ← Kembali ke Katalog
+</a>
+    </div>
+  </div>
+
+  <!-- Detail Produk -->
+  <div class="row mt-5">
+    <div class="col-12">
+      <h4 class="section-title">Detail Produk</h4>
+      <ul id="detail-list"></ul>
+
+      <h4 class="section-title">Material & Kualitas</h4>
+      <ul id="material-list"></ul>
+
+      <h4 class="section-title">Packaging Eksklusif</h4>
+      <ul id="packaging-list"></ul>
+
+      <h4 class="section-title">Catatan Penting</h4>
+      <ul id="note-list"></ul>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="script.js"></script>
+<script src="checkout.js"></script>
+</body>
+</html>

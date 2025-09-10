@@ -1,0 +1,225 @@
+/* Custom tambahan */
+body {
+  font-family: 'Poppins', sans-serif;
+}
+#cart-btn {
+  border-radius: 30px;
+  padding: 10px 20px;
+}
+/* Logo proporsional */
+.logo-img {
+  height: 50px;
+  width: auto;
+}
+
+/* Custom Navbar Theme */
+/* ...existing code... */
+.custom-navbar {
+  background-color: #2196F3; /* biru muda modern */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+/* ...existing code... */
+
+.brand-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: #ffffff !important;
+}
+
+.custom-navbar .nav-link {
+  color: #ffffff;
+  transition: color 0.3s ease;
+}
+
+.custom-navbar .nav-link:hover {
+  color: #1f3dac; /* hover emas */
+}
+
+.custom-navbar .navbar-toggler {
+  border-color: rgba(255, 255, 255, 0.6);
+}
+/* Tambahan untuk tombol pesan di navbar */
+.custom-navbar .btn-success {
+  background-color: #ffffff;
+  color: #2196f3;
+  border: none;
+  font-weight: 500;
+  transition: background 0.3s;
+}
+
+/* ...existing code... */
+
+/* Jarak antar nav item */
+.custom-navbar .nav-item {
+  margin-right: 18px;
+}
+
+/* Tombol pesan persegi panjang dan tulisan tengah */
+.pesan-btn {
+  border-radius: 8px !important;
+  padding: 10px 32px !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+/* ...existing code... */
+/* Header full screen dengan background */
+/* Header full screen dengan background gambar */
+.header {
+  position: relative;
+  height: 100vh;
+  background: url('foto2.JPG') center/cover no-repeat; /* ganti nama file sesuai gambar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+/* Overlay gelap (bukan biru lagi) */
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.45); /* hitam transparan */
+  z-index: 1;
+}
+
+/* Teks tetap di atas overlay */
+.text-section {
+  position: relative;
+  z-index: 2;
+}
+
+.header-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 900; /* super tebal */
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.6); /* biar makin jelas di background */
+}
+
+.header-desc {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500; /* medium tebal */
+  margin-bottom: 30px;
+  color: #f1f1f1;
+}
+
+
+/* Tombol */
+.btn-custom {
+  background-color: #fff;
+  color: #2196f3;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-custom:hover {
+  background-color: #2196f3;
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header-title {
+    font-size: 2rem;
+  }
+  .header-desc {
+    font-size: 1rem;
+  }
+}
+
+/* Section About */
+.about-section {
+  background-color: #f8f9fa; /* abu terang agar kontras dengan header */
+}
+
+.section-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #2196f3;
+}
+
+.about-desc {
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+#searchBar {
+  border-radius: 30px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+}
+#searchBar:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+}
+/* Ukuran gambar produk seragam */
+.product-img {
+  width: 100%;
+  height: 220px;      /* bisa disesuaikan misalnya 220px atau 250px */
+  object-fit: cover;  /* biar gambar tidak ketarik */
+  border-radius: 10px;
+}
+
+/* Kartu produk sama tinggi */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+.testimony-section {
+      position: relative;
+      background: url('website/testi.jpg') center/cover no-repeat;
+      color: white;
+      padding: 100px 0;
+    }
+
+  .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  pointer-events: none; /* overlay hanya visual, tidak menghalangi klik */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  z-index: 3;
+  color: #fff;
+}
+
+    .testimonial-text {
+      font-size: 1.1rem;
+      font-style: italic;
+    }
+
+    .testimonial-photo {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #fff;
+      margin-bottom: 15px;
+    }
+    .footer-blue {
+    background-color: #2196f3; /* biru DodgerBlue */
+  }
